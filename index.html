@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <section>
+      <div>
+        <h1>Background-image</h1>
+        <div>
+          La propiedad CSS background-image establece una o más imágenes de
+          fondo para un elemento. Es posible que, buscando hacer un diseño más
+          avanzado, en lugar de utilizar un color de fondo quieras utilizar
+          imágenes. Para ello, CSS te proporciona la propiedad background-image,
+          con la cuál puedes indicar imágenes de fondo o, como veremos más
+          adelante, incluso gradientes o degradados de varios colores.
+        </div>
+        <br />
+        <div>
+          En el caso de querer utilizar imágenes de fondo, como ya hemos dicho,
+          utilizaremos la propiedad background-image y en el valor, el nombre de
+          la imagen (o la dirección URL donde está alojada), siempre rodeada del
+          texto url().
+        </div>
+        <ul>
+          <li>background-image: none -no utiliza ninguna imagen de fondo</li>
+          <li>
+            background-image url ("image.jpg") - usa la imagen indicada como
+            fondo
+          </li>
+        </ul>
+      </div>
+    </section>
+    </header>
+    <main>
+        <section>
+    <h2>Gradientes o degrado</h2>
+    <div>
+      La propiedad background-image además de imágenes mediante la función
+      url(), posee un mecanismo interesantísimo que permite establecer
+      gradientes o degradados a partir de código. Esencialmente, existen 3
+      funciones de gradientes:
+    </div>
+
+    <ul>
+      <li>linear-gradient()</li>
+      <li>radial-gradient()</li>
+      <li>conic-gradient()</li>
+    </ul>
+
+    <h2>Opciones de imagen de fondo</h2>
+    <div>
+      Una vez establecida una imagen de fondo con background-image, se puede
+      personalizar la forma en la que se mostrará dicha imagen mediante
+      propiedades
+    </div>
+
+    <ul>
+      <li>
+        background-repeat - Establece el modo en el que se repite la imagen de
+        fondo de ser muy pequeña.
+      </li>
+      <li>
+        background-image - Indica si la imagen de fondo permanece fija o se
+        desplaza al hacer scroll.
+      </li>
+      <li>
+        background-position -Establece una posición para la imagen de fondo, de
+        modo que podemos moverla de sitio.
+      </li>
+      <li>
+        background-clip -Modo de relleno de la imagen de fondo. (Ver tema de
+        modelo de cajas).
+      </li>
+      <li>
+        background-size - Establece un tamaño diferente a la imagen de fondo.
+      </li>
+    </ul>
+</section>
+<section>
+    <h3>La propiedad background-repeat</h3>
+    <br />
+    <div>
+      La propiedad background-repeat especifica si la imagen se repetirá
+      horizontalmente (repeat-x), si se repetirá verticalmente (repeat-y), si lo
+      hará en ambas direcciones (repeat) o en ninguna (no-repeat). Por defecto,
+      si no se indica nada, esta propiedad está ajustada en repeat.
+    </div>
+    <h3>La propiedad background-attachment</h3>
+    <br />
+    <div>
+      La propiedad background-attachment especificará si la imagen de fondo
+      seguirá el desplazamiento del usuario al hacer scroll por la página, es
+      decir, si el usuario al hacer scroll y bajar para ver el contenido de la
+      página, la imagen de fondo de desplazará hacia arriba siguiendo el flujo
+      normal de una página. Este comportamiento se consigue con la opción
+      scroll, que es la que viene establecida por defecto.
+    </div>
+
+    <ul>
+      <li>scroll Cuando hacemos scroll la imagen de fondo se desplaza.</li>
+      <li>fixed Cuando hacemos scroll, la imagen de fondo permanece fija.</li>
+    </ul>
+
+    <br />
+    <h3>La propiedad background-position</h3>
+    <br />
+    <div>
+      La propiedad background-position permite desplazar la imagen en la zona
+      especificada por position x y por position y . Por defecto, esos valores
+      son 0% 0%, y pueden especificarse tanto con unidades (porcentajes, píxels,
+      etc...) como mediante palabras clave que representan zonas predefinidas
+      (top, left, right, bottom y center).
+    </div>
+    <br />
+    <h3>La propiedad background-clip</h3>
+    <div>
+      La propiedad background-clip establece la forma en la que el color o la
+      imagen de fondo cubrirá el elemento, mientras que la propiedad
+      background-origin intenta posicionar el comienzo de la imagen de fondo,
+      útil con imágenes. La primera utiliza border-box como valor por defecto,
+      mientras que la segunda utiliza padding-box.
+      <br />
+      <br />
+      Ambas propiedades pueden tomar uno de los siguientes valores:
+      <br />
+      padding-box La imagen o color de fondo cubrirá la zona del espaciado y
+      contenido.
+      <br />
+      border-box La imagen o color de fondo cubrirá la zona del borde, espaciado
+      y contenido.
+      <br />
+      content-box La imagen o color de fondo cubrirá sólo la zona del contenido.
+    </div>
+    <br />
+    <h3>La propiedad background-size</h3>
+    <div>
+      Una propiedad muy interesante es background-size, la cuál nos permite dar
+      un tamaño a la imagen de fondo. Podemos ajustar tanto el tamaño de ancho
+      como el de alto.
+      <br />
+      Ten en cuenta que con background-size puedes utilizar los siguientes
+      valores:
+    </div>
+
+    <ul>
+      <li>
+        auto - No escala la imagen. Utiliza el tamaño original. Es el valor por
+        defecto.
+      </li>
+      <li>
+        unidad - Indicamos el tamaño específico que queremos usar (píxels o
+        porcentaje, por ej.).
+      </li>
+      <li>
+        cover - Escala el ancho de la imagen de fondo al ancho del elemento.
+      </li>
+    </ul>
+</section>
+<section>
+    <h2>Fondos multiples</h2>
+    <div>
+      Hasta ahora, hemos trabajado con CSS para establecer un sólo fondo
+      mediante la propiedad background-image. Sin embargo, CSS permite
+      establecer múltiples fondos separando por comas: background-image:
+      url(imagen1),url(imagen2), ...
+    </div>
+    <div>
+      Hay que tener en cuenta que la primera imagen establecida es la que
+      permanecerá al frente, la siguiente imagen añadida aparecerá detrás de la
+      primera y así con todas las imágenes que se vayan indicando.
+    </div>
+    <h2>Atajo: background</h2>
+    <div>
+      Es posible establecer todas estas propiedades anteriores en una sola regla
+      de CSS a modo de atajo, y así ahorrar mucho espacio en escribir las
+      propiedades anteriores por separado. Si alguno de los valores no
+      necesitamos indicarlo, simplemente lo omitimos.
+      <br />
+      <br />
+      El atajo se construye con la propiedad background y sigue la siguiente
+      estructura:
+      <br />
+      <br />
+      background / color image position /size repeat attachement origin clip
+      <br />
+      <br />
+      Ten en cuenta que el parámetro / es opcional. De indicar el carácter /, la
+      propiedad background se esperará el valor background-size a continuación.
+      Veamos varios ejemplos del uso de la propiedad background:
+      <br />
+      <br />
+      .element {
+      <br />
+      /* Atajo simple */ background: #fff url(imagen.jpg) top center repeat-x;
+      <br />
+      /* Atajo completo */
+      <br />
+      background: deeppink url(imagen.jpg) 0 0 / 150px space scroll padding-box
+      padding- box;
+      <br />
+      /* Atajo múltiple */ background:
+      <br />
+      url(primer-plano.jpg) center center / cover, deeppink url(imagen.jpg) 0 0
+      / 150px space scroll padding-box padding-box; }
+    </div>
+</section>
+</main>
+  </body>
+</html>
